@@ -15,3 +15,63 @@ Repository is in 3 parts:
       - ```gem install bundler```
     - ```gem install jekyll```
     - To run ```bundle exec jekyll serve```
+   
+ ## Usage
+Initially, only the Azure Blob Storage needs to be created. The Azure Function can run locally, and is initally configured to do so.
+The Jekyll Site is run locally.
+
+In an Azure Cli terminal, ... install form this if needed:
+```bash
+winget install Microsoft.AzureCLI
+```
+ 
+ 1. Create an Azure Storage: 
+
+ - Connect to your Azure subscription
+```bash
+az account set --subscription "<your-subscription-id>"
+```
+
+- Create a Resource Group
+```bash
+az group create --name myResourceGroup --location eastus
+```
+- ... where locations is from
+```bash
+az account list-locations --query "[].{Name:name, DisplayName:displayName}" -o table
+```
+
+- Create a storage account
+```bash
+az storage account create \
+    --name mystorageaccount123 \
+    --resource-group myResourceGroup \
+    --location eastus \
+    --sku Standard_LRS \
+    --kind StorageV2
+```
+- Nb: Name must be globally unique, lowercase, 3–24 characters.
+- Get the ConnectionString
+ ```bash
+az storage account show-connection-string \
+    --name mystorageaccount123 \
+    --resource-group myResourceGroup
+```
+2. Settings
+
+Throughot all folder serach for, and replace with actual value:
+- THE_AZURE_FUNCTION_NAME
+  - Thtat is the project name, not emoji
+- BLOB_STORAGE_FUNCTION_KEY
+
+4. Start the Azure Function  
+Open the **VotesSurveyFn** project in VS or VS Code, build and run it
+
+5. In ```VotesBlogSite\VotesBlog``` folder run
+```bash
+ bundle exec jekyll serve
+ ```
+## Further
+Once you get this running deploy to the Function to Azure, and use the files in BlogFiles in your Jekyll site.
+Need to configure for:
+- Azure Function URl and credentials
