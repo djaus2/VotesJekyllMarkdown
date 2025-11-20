@@ -58,11 +58,14 @@ az storage account show-connection-string \
     --resource-group myResourceGroup
 ```
 2. Settings
-
+Set the following Environment variables for teh Function project:
+- TABLES_CONNECTION
+  - The connection-string as above
 Throughot all folder serach for, and replace with actual value:
 - THE_AZURE_FUNCTION_NAME
   - Thtat is the project name, not emoji
-- BLOB_STORAGE_FUNCTION_KEY
+- FUNCTION_KEY
+- 
 
 4. Start the Azure Function  
 Open the **VotesSurveyFn** project in VS or VS Code, build and run it
