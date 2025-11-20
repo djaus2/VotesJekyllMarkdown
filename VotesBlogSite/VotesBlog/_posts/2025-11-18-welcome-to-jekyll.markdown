@@ -1,10 +1,12 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-date:   2025-11-20 13:21:27 +1100
+date:   2025-11-18 13:21:27 +1100
 categories: jekyll update
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+[Voting Example(here)](/2025/11/21/Jekyll-Markdown-Add_voting_to_a_Blog_Post-web.html)
 
 Jekyll requires blog post files to be named according to the following format:
 
