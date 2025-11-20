@@ -1,6 +1,6 @@
 # VotesJekyllMarkdown
 
-Implementing voting on a Jekyll Blog Post page using an Azure Function and an Azure Blob Table Storage.
+Implementing voting on a Jekyll Blog Post page using an Azure Function and an Azure Blob Storage Table.
 
 Repository is in 2 parts:
 - The Azure Function
