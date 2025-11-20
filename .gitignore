@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/VotesSurveyFn/VotesSurveyFn/Properties/ServiceDependencies/DjsSurveyFn - Zip Deploy/appInsights1.arm.json
+/VotesSurveyFn/VotesSurveyFn/Properties/ServiceDependencies/DjsSurveyFn - Zip Deploy/profile.arm.json
+/VotesSurveyFn/VotesSurveyFn/Properties/ServiceDependencies/DjsSurveyFn - Zip Deploy/storage1.arm.json
