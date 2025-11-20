@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "DjsSurveyFn": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7050",
+      "environmentVariables": {
+        "ADMIN_SECRET": "freddy137"
+      }
+    }
+  }
+}
