@@ -5,7 +5,7 @@ param(
   [ValidateSet('all','key')]
   [string]$Extent = 'all',
 
-  # [string]$emojiHost = 'https://AZUREFUNCTION.azurewebsites.net',
+  # [string]$emojiHost = 'https://THE_AZURE_FUNCTION_NAME.azurewebsites.net',
   [string]$emojiHost = 'http://localhost:7050',
 
 

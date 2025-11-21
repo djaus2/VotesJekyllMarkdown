@@ -4,10 +4,10 @@
   console.log('[emoji-counter] script loaded');
   var ns = '{{ site.title | default: "djzblog" | slugify }}' || 'djzblog';
   // Set your Azure Function base URL (no trailing slash)
-  var base = 'https://DjsSurveyFn.azurewebsites.net/api/emoji?action=';
-  //var base = 'http://localhost:7050/api/emoji?action=';
-  var jsBase = 'https://DjsSurveyFn.azurewebsites.net/api/emoji';
-  //var jsBase = 'http://localhost:7050/api/emoji';
+  //var base = 'https://THE_AZURE_FUNCTION_NAME.azurewebsites.net/api/emoji?action=';
+  var base = 'http://localhost:7050/api/emoji?action=';
+  //var jsBase = 'https://THE_AZURE_FUNCTION_NAME.azurewebsites.net/api/emoji';
+  var jsBase = 'http://localhost:7050/api/emoji';
 
   function setPressed(btn, v){ btn.setAttribute('aria-pressed', v ? 'true':'false'); btn.classList.toggle('is-active', !!v); }
   function setCount(cnt, v){ cnt.textContent = String(v || 0); }

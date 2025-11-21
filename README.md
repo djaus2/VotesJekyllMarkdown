@@ -6,7 +6,7 @@ Repository is in 3 parts:
 - VotesSurveyFn
   - The Azure Function
 - BlogFiles
-  - Code files from an existsing Blog site that implements the voting
+  - Code files from an existing Blog site that implements the voting
     - Placed in the required folders.
 - VotesBlogSite
   - A working Jekyll site In BloSite folder

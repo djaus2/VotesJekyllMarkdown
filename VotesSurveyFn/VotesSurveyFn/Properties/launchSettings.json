@@ -1,10 +1,10 @@
 {
   "profiles": {
-    "DjsSurveyFn": {
+    "VotesSurveyFn": {
       "commandName": "Project",
       "commandLineArgs": "--port 7050",
       "environmentVariables": {
-        "ADMIN_SECRET": "ADMINSECRET"
+        "ADMIN_SECRET": "ADMIN_SECRET"
       }
     }
   }

@@ -21,7 +21,7 @@ Jekyll-Markdown is compiled and deployed as a static web site. Sample code and e
 {% include votes.html
    id="vote_survey"
    api="http://localhost:7050/api/emoji"
-   code="kNPmcoDX5aMLqJOJa2WXNOSAg23j7WzRc2ceEI8cqcEBAzFuqU5fRw=="
+   code="BLOB_STORAGE_FUNCTION_KEY"
    key=page.url %}
 
 {% include clear-votes.html %} 
