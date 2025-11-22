@@ -60,7 +60,7 @@ Set the following Environment variables for the Function project:
   - The connection-string as above
 Throughot all folder serach for, and replace with actual value:
 - THE_AZURE_FUNCTION_NAME
-  - Thtat is the project name, not emoji
+  - That is the project name, not emoji
 - FUNCTION_KEY
 - 
 
