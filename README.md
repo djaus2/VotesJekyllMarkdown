@@ -33,13 +33,13 @@ winget install Microsoft.AzureCLI
 ```bash
 az login
 ```
-- Will need to go to browser, choose account and login.
+  - Will need to go to browser, choose account and login.
 
 - Create a Resource Group
 ```bash
 az group create --name myResourceGroup --location mylocation
 ```
-- ... where locations is from
+  - ... where locations is from
 ```bash
 az account list-locations --query "[].{Name:name, DisplayName:displayName}" -o table
 ```
@@ -48,7 +48,7 @@ az account list-locations --query "[].{Name:name, DisplayName:displayName}" -o t
 ```bash
 az storage account create --name mystorageaccount123 --resource-group myResourceGroup --location mylocation --sku Standard_LRS
 ```
-- Nb: Name must be globally unique, lowercase, 3–24 characters.
+  - Nb: Name must be globally unique, lowercase, 3–24 characters.
   
 - Get the ConnectionString
  ```bash
