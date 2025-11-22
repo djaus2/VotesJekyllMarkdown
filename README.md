@@ -33,6 +33,7 @@ winget install Microsoft.AzureCLI
 ```bash
 az login
 ```
+- Will need to go to browser, choose account and login.
 
 - Create a Resource Group
 ```bash
@@ -54,7 +55,7 @@ az storage account create --name mystorageaccount123 --resource-group myResource
 az storage account show-connection-string  --name mystorageaccount123   --resource-group myResourceGroup
 ```
 2. Settings
-Set the following Environment variables for teh Function project:
+Set the following Environment variables for the Function project:
 - TABLES_CONNECTION
   - The connection-string as above
 Throughot all folder serach for, and replace with actual value:
