@@ -31,12 +31,12 @@ winget install Microsoft.AzureCLI
 
  - Connect to your Azure subscription
 ```bash
-az account set --subscription "<your-subscription-id>"
+az login
 ```
 
 - Create a Resource Group
 ```bash
-az group create --name myResourceGroup --location eastus
+az group create --name myResourceGroup --location mylocation
 ```
 - ... where locations is from
 ```bash
@@ -45,19 +45,13 @@ az account list-locations --query "[].{Name:name, DisplayName:displayName}" -o t
 
 - Create a storage account
 ```bash
-az storage account create \
-    --name mystorageaccount123 \
-    --resource-group myResourceGroup \
-    --location eastus \
-    --sku Standard_LRS \
-    --kind StorageV2
+az storage account create --name mystorageaccount123 --resource-group myResourceGroup --location mylocation --sku Standard_LRS
 ```
 - Nb: Name must be globally unique, lowercase, 3–24 characters.
+  
 - Get the ConnectionString
  ```bash
-az storage account show-connection-string \
-    --name mystorageaccount123 \
-    --resource-group myResourceGroup
+az storage account show-connection-string  --name mystorageaccount123   --resource-group myResourceGroup
 ```
 2. Settings
 Set the following Environment variables for teh Function project:
