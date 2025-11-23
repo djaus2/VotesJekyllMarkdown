@@ -3,7 +3,8 @@
 Implementing voting on a Jekyll Blog Post page using an Azure Function and an Azure Blob Storage Table.
 
 > Detailed discussion here: [Jekyll-Markdown-Add_voting_to_a_Blog_Post](https://davidjones.sportronics.com.au/web/Jekyll-Markdown-Add_voting_to_a_Blog_Post-web.html)
-> And ... [Jekyll-Markdown-Add_voting_to_a_Blog_Post_-_How_to-web Part 1](https://davidjones.sportronics.com.au/web/Jekyll-Markdown-Add_voting_to_a_Blog_Post_-_How_to-web.html)
+
+> And ... [Jekyll-Markdown-Add_voting_to_a_Blog_Post_-_How_to-web Part 1](https://davidjones.sportronics.com.au/web/Jekyll-Markdown-Add_voting_to_a_Blog_Post_-_How_to-web.html)  ..._ Part 2 coming_
 
 Repository is in 3 parts:
 - VotesSurveyFn
