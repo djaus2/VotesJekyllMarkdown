@@ -39,8 +39,8 @@ public class EmojiFunction
 {
     private readonly TableClient _counts;
     private readonly TableClient _votes;
-    private const string CountsTable = "DjsSurvey";
-    private const string VotesTable = "DjsSurveyVotes";
+    private const string CountsTable = "MySurveyTallies";
+    private const string VotesTable = "MySurveyLogs";
     private static string SanitizeForKey(string s)
     {
         if (string.IsNullOrWhiteSpace(s)) return "home";
@@ -62,13 +62,19 @@ public class EmojiFunction
     }
     public EmojiFunction()
     {
-        var conn = Environment.GetEnvironmentVariable("TABLES_CONNECTION")
-                   ?? Environment.GetEnvironmentVariable("AzureWebJobsStorage");
-        var svc = new TableServiceClient(conn);
-        _counts = svc.GetTableClient(Environment.GetEnvironmentVariable("TABLE_NAME") ?? CountsTable);
-        _votes = svc.GetTableClient(Environment.GetEnvironmentVariable("VOTES_TABLE") ?? VotesTable);
-        _counts.CreateIfNotExists();
-        _votes.CreateIfNotExists();
+        try
+        {
+            var conn = Environment.GetEnvironmentVariable("TABLES_CONNECTION")
+                       ?? Environment.GetEnvironmentVariable("BLOB_STORAGE_CONNECTION_STRING");
+            var svc = new TableServiceClient(conn);
+            _counts = svc.GetTableClient(Environment.GetEnvironmentVariable("TABLE_NAME") ?? CountsTable);
+            _votes = svc.GetTableClient(Environment.GetEnvironmentVariable("VOTES_TABLE") ?? VotesTable);
+            _counts.CreateIfNotExists();
+            _votes.CreateIfNotExists();
+        } catch (Exception ex)
+        {
+
+        }
     }
     // inside your EmojiFunction class
     // Add "post" to the trigger
@@ -118,8 +124,8 @@ public class EmojiFunction
                 GET.../ api / emoji ? action = reset & secret = YOUR_ADMIN & extent = all
                 Response: { "ok":true,"wiped":"all"}
             Wipe specific:
-                GET.../ api / emoji ? action = reset & secret = YOUR_ADMIN & ns = djzblog & key = home
-                Response: { "ok":true,"wiped":"djzblog:home"}*/
+                GET.../ api / emoji ? action = reset & secret = YOUR_ADMIN & ns = myblog & key = home
+                Response: { "ok":true,"wiped":"myblog:home"}*/
         // Where ADMIN_SECRET = home
         if (action == "reset")
         {

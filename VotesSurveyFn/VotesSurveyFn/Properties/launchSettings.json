@@ -4,7 +4,8 @@
       "commandName": "Project",
       "commandLineArgs": "--port 7050",
       "environmentVariables": {
-        "ADMIN_SECRET": "ADMIN_SECRET"
+        "ADMIN_SECRET": "ADMIN_SECRET",
+        "BLOB_STORAGE_CONNECTION_STRING": "BLOB_STORAGE_CONNECTION_STRING"
       }
     }
   }
