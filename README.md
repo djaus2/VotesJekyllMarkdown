@@ -2,6 +2,10 @@
 
 Implementing voting on a Jekyll Blog Post page using an Azure Function and an Azure Blob Storage Table.
 
+> Detailed discussion here: [Jekyll-Markdown-Add_voting_to_a_Blog_Post](https://davidjones.sportronics.com.au/web/Jekyll-Markdown-Add_voting_to_a_Blog_Post-web.html)
+
+> And ... [Jekyll-Markdown-Add_voting_to_a_Blog_Post_-_How_to-web Part 1](https://davidjones.sportronics.com.au/web/Jekyll-Markdown-Add_voting_to_a_Blog_Post_-_How_to-web.html)  ..._ Part 2 coming_
+
 Repository is in 3 parts:
 - VotesSurveyFn
   - The Azure Function
@@ -29,41 +33,36 @@ winget install Microsoft.AzureCLI
 
  - Connect to your Azure subscription
 ```bash
-az account set --subscription "<your-subscription-id>"
+az login
 ```
+  - Will need to go to browser, choose account and login.
 
 - Create a Resource Group
 ```bash
-az group create --name myResourceGroup --location eastus
+az group create --name myResourceGroup --location mylocation
 ```
-- ... where locations is from
+  - ... where locations is from
 ```bash
 az account list-locations --query "[].{Name:name, DisplayName:displayName}" -o table
 ```
 
 - Create a storage account
 ```bash
-az storage account create \
-    --name mystorageaccount123 \
-    --resource-group myResourceGroup \
-    --location eastus \
-    --sku Standard_LRS \
-    --kind StorageV2
+az storage account create --name mystorageaccount123 --resource-group myResourceGroup --location mylocation --sku Standard_LRS
 ```
-- Nb: Name must be globally unique, lowercase, 3–24 characters.
+  - Nb: Name must be globally unique, lowercase, 3–24 characters.
+  
 - Get the ConnectionString
  ```bash
-az storage account show-connection-string \
-    --name mystorageaccount123 \
-    --resource-group myResourceGroup
+az storage account show-connection-string  --name mystorageaccount123   --resource-group myResourceGroup
 ```
 2. Settings
-Set the following Environment variables for teh Function project:
+Set the following Environment variables for the Function project:
 - TABLES_CONNECTION
   - The connection-string as above
 Throughot all folder serach for, and replace with actual value:
 - THE_AZURE_FUNCTION_NAME
-  - Thtat is the project name, not emoji
+  - That is the project name, not emoji
 - FUNCTION_KEY
 - 
 
