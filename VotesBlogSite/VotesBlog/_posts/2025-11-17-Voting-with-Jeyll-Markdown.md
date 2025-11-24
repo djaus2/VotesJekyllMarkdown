@@ -21,13 +21,14 @@ Jekyll-Markdown is compiled and deployed as a static web site. Sample code and e
 
 {% assign api_endpoint = site.gAPI | default: 'emoji' %}
 
-{% assign api_url = 'https://localhost' | append: site.gPORT | append: api_endpoint %}
+{% assign api_url = 'http://localhost:' | append: site.gLOCALHOST_PORT | append: '/api/' | append: api_endpoint %}
 
 {% include votes.html
-   iid=site.gSURVEY_ID
+   id=site.gSURVEY_ID
    api=api_url
    code=site.gYOUR_FUNCTION_KEY
    key=page.url %}
+
    
 
 
