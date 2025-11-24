@@ -1,11 +1,11 @@
 
-<div class="survey" data-id="{{ include.id | default: 'The quick brown' }}" data-ns="{{ site.title | default: 'option1' | slugify }}" data-api="{{ include.api | default: '' }}" data-key="{{ include.key | default: page.url }}" data-code="{{ include.code | default: '' }}">
-  <h2>Votes Survey</h2>
-  <h3>Q. What do you want to do?</h3>
-    <i>(Please Select one. Votes shown.)</i>
+<div class="survey" data-id="{{ include.id | default: 'athstitcher_interest' }}" data-ns="{{ site.title | default: 'djzblog' | slugify }}" data-api="{{ include.api | default: '' }}" data-key="{{ include.key | default: page.url }}" data-code="{{ include.code | default: '' }}">
+  <h2>Survey</h2>
+  <h3>Q. What is your interest in the AthStitcher app?</h3>
+    <i>(Please Select one. You can only vote once. Current votes shown.)</i>
   <div class="survey-options">
     <ul>
-    {% assign options = site.data.voteoptions %}
+    {% assign options = site.data.athstitcherapp %}
     {% if options %}
       {% for pair in options %}
         {% assign opt = pair[0] %}

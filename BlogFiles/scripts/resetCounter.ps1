@@ -5,7 +5,9 @@ param(
   [ValidateSet('all','key')]
   [string]$Extent = 'all',
 
-  [string]$emojiHost = 'https://djssurveyfn.azurewebsites.net',
+  # [string]$emojiHost = 'https://THE_AZURE_FUNCTION_NAME.azurewebsites.net',
+  [string]$emojiHost = 'http://localhost:7050',
+
 
   # Optional Azure Functions key (AuthorizationLevel.Function). Accepts raw key or full URL.
   [string]$Code,

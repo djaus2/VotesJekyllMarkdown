@@ -53,3 +53,13 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+ 
+ Custom global variables
+# Accessible via {{ site.gXXX }} in templates/pages.gAPI: "emoji"
+gYOUR_FUNCTION_PROJECT_NAME: "YOUR_FUNCTION_PROJECT_NAME"
+gYOUR_FUNCTION_KEY: "YOUR_FUNCTION_KEY"
+gYOUR_STORAGE_CONTAINER_NAME: "YOUR_STORAGE_CONTAINER_NAME"
+gBLOB_STORAGE_CONNECTION_STRING: "BLOB_STORAGE_CONNECTION_STRING"
+gADMIN_SECRET: "YOUR_ADMIN_SECRET"
+gLOCALHOST_PORT: "7050"

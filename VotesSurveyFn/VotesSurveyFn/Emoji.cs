@@ -39,8 +39,8 @@ public class EmojiFunction
 {
     private readonly TableClient _counts;
     private readonly TableClient _votes;
-    private const string CountsTable = "DjsSurvey";
-    private const string VotesTable = "DjsSurveyVotes";
+    private const string CountsTable = "VotesSurveyTallies";
+    private const string VotesTable = "VotesSurveyVotes";
     private static string SanitizeForKey(string s)
     {
         if (string.IsNullOrWhiteSpace(s)) return "home";

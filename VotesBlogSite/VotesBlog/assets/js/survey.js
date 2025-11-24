@@ -1,4 +1,5 @@
 (function(){
+  console.log('[survey] script loaded');
 
   function getClientId(){
     try {
@@ -23,7 +24,8 @@
     var fnCode = root.getAttribute('data-code') || '';
     var status = root.querySelector('.survey-status');
     var buttons = root.querySelectorAll('.survey-opt');
-    try { console.log('[survey] init', { ns: ns, id: id, api: api || '(none)', key: pageKey, buttons: buttons.length }); } catch(e){}
+    try { console.log('[survey] init-1', { ns: ns, id: id, api: api || '(none)', key: pageKey}); } catch(e){}
+    try { console.log('[survey] init-2', { code: fnCode, buttons: buttons.length }); } catch(e){}
 
     var storeKey = 'survey_vote_' + ns + ':' + id;
      //localStorage.clear(); // DEBUGGING ONLY - remove in production

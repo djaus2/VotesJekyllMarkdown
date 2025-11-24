@@ -18,11 +18,18 @@ Jekyll-Markdown is compiled and deployed as a static web site. Sample code and e
  api="https://THE_AZURE_FUNCTION_NAME.azurewebsites.net/api/emoji
 {% endcomment %}
 
+
+{% assign api_endpoint = site.gAPI | default: 'emoji' %}
+
+{% assign api_url = 'https://localhost' | append: site.gPORT | append: api_endpoint %}
+
 {% include votes.html
-   id="vote_survey"
-   api="http://localhost:7050/api/emoji"
-   code="BLOB_STORAGE_FUNCTION_KEY"
+   iid=site.gSURVEY_ID
+   api=api_url
+   code=site.gYOUR_FUNCTION_KEY
    key=page.url %}
+   
+
 
 {% include clear-votes.html %} 
 
