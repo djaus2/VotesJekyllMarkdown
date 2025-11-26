@@ -8,12 +8,12 @@
   var api_endpoint = '{{ site.gAPI | default: "emoji" }}';
 
   //For when Function is deployed to Azure
-  var base = 'https://{{ site.gYOUR_FUNCTION_PROJECT_NAME }}.azurewebsites.net/api/$(api_endpoint)?action='
-  var jsBase = 'https://{{ site.gYOUR_FUNCTION_PROJECT_NAME }}.azurewebsites.net/api/$(api_endpoint)';
+  var base2 = 'https://{{ site.gYOUR_FUNCTION_PROJECT_NAME }}.azurewebsites.net/api/$(api_endpoint)?action='
+  var jsBase2 = 'https://{{ site.gYOUR_FUNCTION_PROJECT_NAME }}.azurewebsites.net/api/$(api_endpoint)';
  
-  // For when running Function locally
-  var base2 = 'http://localhost:{{ site.gPORT }}/api/$(api_endpoint)?action=';
-  var jsBase2 = 'http://localhost:{{ site.gPORT }}/api/$(api_endpoint)';
+  // For when running Function locally Rename base2 to base and viz to test locally
+  var base = 'http://localhost:{{ site.gLOCALHOST_PORT }}/api/$(api_endpoint)?action=';
+  var jsBase = 'http://localhost:{{ site.gLOCALHOST_PORT }}/api/$(api_endpoint)';
 
   function setPressed(btn, v){ btn.setAttribute('aria-pressed', v ? 'true':'false'); btn.classList.toggle('is-active', !!v); }
   function setCount(cnt, v){ cnt.textContent = String(v || 0); }
