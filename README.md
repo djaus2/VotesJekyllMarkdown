@@ -19,8 +19,9 @@ Repository is in 3 parts:
     - Including Blog Site Files
     - Need
       - ```gem install bundler```
-    - ```gem install jekyll```
-    - To run ```bundle exec jekyll serve```
+      - ```gem install jekyll```
+      - To build ```bundle exec jekyll build```
+      - To run ```bundle exec jekyll serve```
    
  ## Usage
 Initially, only the Azure Blob Storage needs to be created. The Azure Function can run locally, and is initally configured to do so.
